@@ -8,19 +8,24 @@ $(document).ready(function () {
     });
     
     // on anywhere click
-    $('body').click(function (event) {
-        //Hide the sub menus if visible if it'sd anywhere except the li elements
-        if (event.target.className !== 'sub-item' && event.target.localName !== 'li'){
-            //console.log(event.target);
-            $('li').removeClass('open');
-        };
-    });
+        $('body').on('click', function (event) {
+            //Hide the sub menus if visible if it's anywhere except the li elements
+            if ($('li').hasClass('open')) {
+                if (event.target.className !== 'sub-item' && event.target.localName !== 'li') {
+                    //console.log(event.target);
+                    $('li').removeClass('open');
+                };
+             }
+        });
+        
+
+    
 
     // slick carousel initiation
     $('.carousel').slick({
         slidesToShow: 3,
         dots: false,
-        centerMode: true,
+        centerMode: false
     });
 
     /******** background video logic *********/
