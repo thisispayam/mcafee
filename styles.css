@@ -586,7 +586,7 @@ h6 a {
     font-size: 20px;
     line-height: 1;
     opacity: .75;
-    color: var(--grey);
+    color: var(--red);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -619,6 +619,7 @@ h6 a {
 
 .slick-next:before {
     content: '\25BA';
+    font-size: 23px;
 }
 
 [dir='rtl'] .slick-next:before {
